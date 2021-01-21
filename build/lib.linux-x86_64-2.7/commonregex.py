@@ -18,7 +18,7 @@ zip_code       = re.compile(r'\b\d{5}(?:[-\s]\d{4})?\b')
 po_box         = re.compile(r'P\.? ?O\.? Box \d+', re.IGNORECASE)
 ssn            = re.compile('(?!000|666|333)0*(?:[0-6][0-9][0-9]|[0-7][0-6][0-9]|[0-7][0-7][0-2])[- ](?!00)[0-9]{2}[- ](?!0000)[0-9]{4}')
 hashtag        = re.compile(r'\B#\w*[a-zA-Z0-9_.+-]+\w*') # Still a WIP, trying to add symbol support
-AtUsername     = re.compile(r'\B@\w*[a-zA-Z0-9_.+-]+\w*') # Still a WIP, trying to add symbol support
+atUsername     = re.compile(r'\B@\w*[a-zA-Z0-9_.+-]+\w*') # Still a WIP, trying to add symbol support
 
 regexes = {"dates"            : date,
            "times"            : time,
@@ -36,7 +36,7 @@ regexes = {"dates"            : date,
            "po_boxes"         : po_box,
            "ssn_number"       : ssn,
            "hashtags"         : hashtag,
-           "usernames"        : AtUsername
+           "usernames"        : atUsername,
           }
 
 class regex:
